@@ -31,7 +31,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://code.highcharts.com/maps/highmaps.js"></script>
   <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+  <script src="https://code.highcharts.com/mapdata/custom/world-highres2.js"></script>
 </head>
 <body>
   <div id="bg"></div>
@@ -45,7 +45,7 @@ $(function () {
       var data = [
           {
               "hc-key": "cn",
-              "value": 13
+              "value": 14
           },
           {
               "hc-key": "us",
@@ -93,7 +93,7 @@ $(function () {
           },
           {
               "hc-key": "gb",
-              "value": 2
+              "value": 4
           },
           {
               "hc-key": "ie",
@@ -225,18 +225,8 @@ $(function () {
 
           series : [{
               data : data,
-              mapData: Highcharts.maps['custom/world'],
+              mapData: Highcharts.maps['custom/world-highres2'],
               joinBy: 'hc-key',
-              name: 'Random data',
-              states: {
-                  hover: {
-                      color: '#BADA55'
-                  }
-              },
-              dataLabels: {
-                  enabled: false,
-                  format: '{point.name}'
-              }
           }]
       });
   });
